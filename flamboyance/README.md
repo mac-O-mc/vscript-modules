@@ -35,10 +35,10 @@ const BrightGreen = "\x03"
 const Orange = "\x04"
 const OliveGreen = "\x05"
 
-const "HUD_PRINTNOTIFY" = 1
-const "HUD_PRINTCONSOLE" = 2
-const "HUD_PRINTTALK" = 3
-const "HUD_PRINTCENTER" = 4
+const HUD_PRINTNOTIFY = 1
+const HUD_PRINTCONSOLE = 2
+const HUD_PRINTTALK = 3
+const HUD_PRINTCENTER = 4
 
 function OnGameEvent_ammo_pickup( params )
 {
