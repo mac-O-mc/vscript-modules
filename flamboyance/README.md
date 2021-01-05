@@ -48,7 +48,7 @@ function OnGameEvent_ammo_pickup( params )
 	else
 		terrorplayer.GiveItem("shotgun_chrome");
 
-	ClientPrint(null, DirectorScript.HUD_PRINTTALK, "OnGameEvent_ammo_pickup: fired");
+	ClientPrint(null, HUD_PRINTTALK, Orange+"OnGameEvent_ammo_pickup: fired");
 }
 ```
 (Semicolons aren't actually needed in Squirrel, but can be used for organization purposes.)
