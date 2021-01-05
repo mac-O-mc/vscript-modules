@@ -3,6 +3,6 @@
 # top-most EditorConfig file
 root = true
 
-[*]
+[*.nut]
 indent_style = tab
 insert_final_newline = false
