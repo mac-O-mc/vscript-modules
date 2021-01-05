@@ -48,4 +48,4 @@ if (!("Flamboyance" in getroottable()))
 		catch(exception)
 			ClientPrint(null, DirectorScript.HUD_PRINTTALK, (ParseEnums(colorcode))+"::Flamboyance.PrintToChatAll throwing exception: "+exception);
 	}
-}
+}	
