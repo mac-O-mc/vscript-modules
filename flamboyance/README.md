@@ -85,10 +85,8 @@ HUD_PRINTTALK    | 3 (_integer_) | Prints to the chat box. Supports custom color
 HUD_PRINTCENTER  | 4 (_integer_) | 
 
 ### Functions
-#### ::Flamboyance.PrintToChatAll(string, colorcode = "Orange")
+#### __::Flamboyance.PrintToChatAll(string, colorcode = "Orange")__
 Prints to all clients's textboxes with the desired string and colorcode enum. (see above)
-
-Example:
 ```Squirrel
 const ZOMBIE_TANK = 8
 
@@ -106,8 +104,24 @@ function OnGameEvent_player_incapacitated( params )
 }
 ```
 
-#### ::Flamboyance.CustomizedPrint(string, client, printdest = 3, colorcode = "Orange")
+#### __::Flamboyance.CustomizedPrint(string, client, printdest = 3, colorcode = "Orange")__
 Print a message of any valid colorcode to any client you want (pass `null` to send to all clients), and which Print Destination to use. Very similar to `ClientPrint`. 
+```Squirrel
+function EHandleToPlayer(ehandle) {
+	local player = null
+	while (player = Entities.FindByClassname(player, "player")) {
+		
+		if (ehandle == player.GetEntityHandle()) {
+			local ListenServerHost = GetListenServerHost();
+			if (ListenServerHost) {
+				::Flamboyance.CustomizedPrint("EHandleToPlayer: Found match",ListenServerHost,"HUD_PRINTTALK","BrightGreen")
+			}
+			return player
+		}
+	}
+	return null
+}
+```
 
 #### Notes:
 - Don't pass "\x05" as strings in the 'colorcode' variable section, or your resulting string will send nothing.
