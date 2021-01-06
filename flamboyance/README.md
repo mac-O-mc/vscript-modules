@@ -7,13 +7,14 @@ Example code used with valid VScript functions:
 function ShotgunOrSMG( string )
 {
 	local gave_weapon = "none!";
-	if (string == Shotgun)
+	if (string == Shotgun) {
 		terrorplayer.GiveItem("shotgun_chrome");
 		gave_weapon = "Shotgun"
-	else if (string == "SMG")
+	}
+	else if (string == "SMG") {
 		terrorplayer.GiveItem("smg_mp5");
 		gave_weapon = "SMG"
-
+	}
 	::Flamboyance.PrintToChatAll("Gave a weapon: " + gave_weapon, "OliveGreen");
 }
 ```
@@ -22,13 +23,14 @@ function ShotgunOrSMG( string )
 function ShotgunOrSMG( string )
 {
 	local gave_weapon = "none!";
-	if (string == Shotgun)
+	if (string == Shotgun) {
 		terrorplayer.GiveItem("shotgun_chrome");
 		gave_weapon = "Shotgun"
-	else if (string == "SMG")
+	}
+	else if (string == "SMG") {
 		terrorplayer.GiveItem("smg_mp5");
 		gave_weapon = "SMG"
-
+	}
 	ClientPrint(null, DirectorScript.HUD_PRINTTALK, "\x05Gave a weapon: " + gave_weapon);
 }
 
@@ -48,13 +50,14 @@ const HUD_PRINTCENTER = 4
 function ShotgunOrSMG( string )
 {
 	local gave_weapon = "none!";
-	if (string == Shotgun)
+	if (string == Shotgun)	{
 		terrorplayer.GiveItem("shotgun_chrome");
 		gave_weapon = "Shotgun"
-	else if (string == "SMG")
+	}
+	else if (string == "SMG")	{
 		terrorplayer.GiveItem("smg_mp5");
 		gave_weapon = "SMG"
-
+	}
 	ClientPrint(null, HUD_PRINTTALK, OliveGreen+"Gave a weapon: " + gave_weapon);
 }
 ```
