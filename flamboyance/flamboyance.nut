@@ -31,16 +31,16 @@ if (!("Flamboyance" in getroottable()))
 			ClientPrint(null, DirectorScript.HUD_PRINTTALK, Orange+"FLAMOYANCE MODULE - ParseEnums EXCEPTION: "+exception);
 	}
 
-	::Flamboyance.CustomizedPrint <- function(string, client, hudloc = 3, colorcode = "\x04")
+	::Flamboyance.CustomizedPrint <- function(string, client, printdest = 3, colorcode = "Orange")
 	{
 		try{
-			ClientPrint(client, ParseEnums(hudloc), (ParseEnums(colorcode))+string);
+			ClientPrint(client, ParseEnums(printdest), (ParseEnums(colorcode))+string);
 		}
 		catch(exception)
-			ClientPrint(null, hudloc, (ParseEnums(colorcode))+"::Flamboyance.Print throwing exception: "+exception);
+			ClientPrint(null, printdest, (ParseEnums(colorcode))+"::Flamboyance.Print throwing exception: "+exception);
 	}
 
-	::Flamboyance.PrintToChatAll <- function(string, colorcode = "\x04")
+	::Flamboyance.PrintToChatAll <- function(string, colorcode = "Orange")
 	{
 		try{
 			ClientPrint(null, DirectorScript.HUD_PRINTTALK, (ParseEnums(colorcode))+string);
@@ -48,4 +48,4 @@ if (!("Flamboyance" in getroottable()))
 		catch(exception)
 			ClientPrint(null, DirectorScript.HUD_PRINTTALK, (ParseEnums(colorcode))+"::Flamboyance.PrintToChatAll throwing exception: "+exception);
 	}
-}	
+}
